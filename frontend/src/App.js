@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const checkForMessages = async () => {
       try {
-        const res = await fetch('https://ai-companion-6nub.onrender.com/chat');
+        const res = await fetch('https://ai-companion-6nub.onrender.com/check');
         const data = await res.json();
         if (data.messages.length > 0) {
           data.messages.forEach(msg => {
@@ -52,7 +52,7 @@ function App() {
     setIsTyping(true);
 
     try {
-      const res = await fetch('https://ai-companion-6nub.onrender.com/check', {
+      const res = await fetch('https://ai-companion-6nub.onrender.com/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })

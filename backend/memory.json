@@ -1,0 +1,10 @@
+{
+  "default": {
+    "facts": [
+      "User's name is Lucy",
+      "User lives in California",
+      "User is 19 years old"
+    ],
+    "events": []
+  }
+}
